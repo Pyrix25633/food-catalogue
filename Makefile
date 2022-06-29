@@ -21,7 +21,7 @@ run-container:
 > chown -R pyrix25633:pyrix25633 ./transfer/docker/*
 
 run-dotnet-debug:
-> dotnet ./transfer/docker/debug/food-catalogue
+> dotnet ./transfer/docker/debug/food-catalogue.dll
 
 run-dotnet-release:
 > ./transfer/docker/release/linux-x64/food-catalogue

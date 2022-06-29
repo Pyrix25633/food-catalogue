@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Terminal.GUI" Version="1.6.4" />
+  </ItemGroup>
+
 </Project>
