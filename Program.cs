@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using Terminal.Gui;
 using NStack;
 
@@ -19,16 +20,20 @@ namespace food_catalogue {
                 Width = Dim.Fill(), Height = Dim.Fill()
             };
             top.Add(win);
-            //ListView expired = new ListView();
+            DataTable dataTable = new DataTable(Language.translation.list);
+            DataColumn column = new DataColumn();
+            column.DataType = System.Type.GetType("System.Int32");
+            column.ColumnName = Language.translation.id;
+            column.ReadOnly = false;
+            column.Unique = false;
+            dataTable.Columns.Add(column);
+            TableView tableView = new TableView(dataTable);
             Button remove = new Button(0, 10, (ustring)Language.translation.remove);
             remove.Clicked += RemoveItem;
             void RemoveItem() {
-                //if(expired.Source.Length > 0)
-                    //expired.Source = Functions.RemoveAt(expired.Source, expired.SelectedItem);
             }
             win.Add(
-                new Label(0, 0, Language.translation.expired),
-                //expired,
+                new Label(0, 0, Language.translation.list),
                 remove
             );
             Application.Run();

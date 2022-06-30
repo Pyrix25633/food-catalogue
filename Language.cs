@@ -18,7 +18,8 @@ namespace food_catalogue {
         public string? quit {get; set;}
         public string? save {get; set;}
         public string? remove {get; set;}
-        public string? expired {get; set;}
+        public string? list {get; set;}
+        public string? id {get; set;}
     }
     public class Lang {
         public string? language {get; set;}
