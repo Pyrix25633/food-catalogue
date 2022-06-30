@@ -1,4 +1,6 @@
 {
+    "quit": "Quit",
+    "save": "Save",
     "remove": "Remove",
     "expired": "Expired"
 }

@@ -6,10 +6,12 @@ namespace food_catalogue {
     public class Program {
         static void Main(string[] args) {
             Language.ReadTranslation();
+            Database.ReadDatabase();
             Application.Init();
             Toplevel top = Application.Top;
             MenuBar menu = new MenuBar(new MenuBarItem[] {
-                new MenuBarItem ("Quit", "", () => {top.Running = false;})
+                new MenuBarItem(Language.translation.quit, "", () => {Database.WriteDatabase(); top.Running = false;}),
+                new MenuBarItem(Language.translation.save, "", () => {Database.WriteDatabase();})
 		    });
             top.Add(menu);
             Window win = new Window("Window") {

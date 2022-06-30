@@ -15,6 +15,8 @@ namespace food_catalogue {
     }
 
     public class Translation {
+        public string? quit {get; set;}
+        public string? save {get; set;}
         public string? remove {get; set;}
         public string? expired {get; set;}
     }
